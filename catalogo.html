@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Stickers Tech | Capa Siete Studio</title>
+  <meta name="description" content="Explorá nuestro catálogo completo de stickers de programación: Frontend, Backend, DevOps, IA, Gaming y más. Filtrá por categoría y tecnología.">
+  <meta name="keywords" content="catálogo stickers, stickers React, stickers Python, stickers Docker, stickers developers">
+  <link rel="canonical" href="https://exthuman.github.io/utn-c7s/catalogo.html">
+  <meta property="og:title" content="Catálogo de Stickers Tech | Capa Siete Studio">
+  <meta property="og:description" content="Explorá todos nuestros diseños de stickers tech.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exthuman.github.io/utn-c7s/catalogo.html">
+  <meta property="og:image" content="img/c7s-v5.png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+          <img src="img/c7s-v5.png" alt="Logo Capa Siete Studio" width="48" height="48">
+          <div class="d-flex flex-column">
+            <span class="brand-name">Capa Siete Studio</span>
+            <span class="brand-tagline">Tech Stickers</span>
+          </div>
+        </a>
+        <button class="navbar-toggler min-touch" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-lg-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link fw-medium" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium active" aria-current="page" href="catalogo.html">Catálogo</a></li>
+            <li class="nav-item"><a class="nav-link fw-medium" href="contacto.html">Contacto</a></li>
+            <li class="nav-item">
+              <button class="btn btn-primary btn-cart d-flex align-items-center gap-2 min-touch" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="Abrir carrito">
+                <i class="bi bi-cart3"></i>
+                <span class="d-lg-none">Carrito (</span><span data-cart-count>0</span><span class="d-lg-none">)</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header-gradient text-white page-header-padding" aria-labelledby="catalog-title">
+      <div class="container py-3">
+        <h1 id="catalog-title" class="text-page-title mb-2">Catálogo Completo</h1>
+        <p class="text-page-lead mb-0">Explora todos nuestros diseños de stickers tech</p>
+      </div>
+    </section>
+
+    <div class="container py-4 py-md-5">
+      <button class="btn btn-outline-secondary w-100 d-lg-none mb-4 d-flex align-items-center justify-content-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#filtersOffcanvas" aria-controls="filtersOffcanvas">
+        <i class="bi bi-funnel"></i> Filtros
+      </button>
+
+      <div class="row g-4">
+        <aside class="col-lg-3 d-none d-lg-block filter-sidebar" aria-label="Filtros de búsqueda">
+          <div class="bg-white p-4 rounded-3 border mb-4">
+            <h2 class="text-base fw-semibold mb-3">Buscar</h2>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent"><i class="bi bi-search text-muted-custom"></i></span>
+              <input type="search" id="catalogSearch" class="form-control" placeholder="Buscar productos..." aria-label="Buscar productos">
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-3 border mb-4">
+            <h2 class="text-base fw-semibold mb-3">Categorías</h2>
+            <div class="d-flex flex-column gap-2">
+              <button type="button" class="filter-btn active" data-filter-category="all">Todos</button>
+              <button type="button" class="filter-btn" data-filter-category="Frontend">Frontend</button>
+              <button type="button" class="filter-btn" data-filter-category="Backend">Backend</button>
+              <button type="button" class="filter-btn" data-filter-category="Inteligencia Artificial">Inteligencia Artificial</button>
+              <button type="button" class="filter-btn" data-filter-category="DevOps">DevOps</button>
+              <button type="button" class="filter-btn" data-filter-category="Bases de Datos">Bases de Datos</button>
+              <button type="button" class="filter-btn" data-filter-category="Ciberseguridad">Ciberseguridad</button>
+              <button type="button" class="filter-btn" data-filter-category="Gaming">Gaming</button>
+              <button type="button" class="filter-btn" data-filter-category="Diseño">Diseño</button>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-3 border">
+            <h2 class="text-base fw-semibold mb-3">Tecnologías</h2>
+            <div class="d-flex flex-column gap-2">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-react"><label class="form-check-label" for="tech-react">React</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-python"><label class="form-check-label" for="tech-python">Python</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-js"><label class="form-check-label" for="tech-js">JavaScript</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-docker"><label class="form-check-label" for="tech-docker">Docker</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-ts"><label class="form-check-label" for="tech-ts">TypeScript</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="tech-vue"><label class="form-check-label" for="tech-vue">Vue.js</label></div>
+            </div>
+          </div>
+        </aside>
+
+        <section class="col-lg-9" aria-label="Listado de productos">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mb-4 pb-3 border-bottom">
+            <p class="text-muted-custom mb-0">Mostrando <strong id="resultsCount" class="text-dark">9</strong> productos</p>
+            <select class="form-select w-auto" aria-label="Ordenar productos">
+              <option selected>Más relevante</option>
+              <option>Precio: menor a mayor</option>
+              <option>Precio: mayor a menor</option>
+              <option>Más populares</option>
+              <option>Nuevos primero</option>
+            </select>
+          </div>
+
+          <div class="row row-cols-2 row-cols-md-3 gap-grid" id="productGrid">
+            <article class="col" data-product-card data-name="React Hook Sticker" data-category="Frontend">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker React Hook" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">React Hook Sticker</h3><p class="text-muted-custom text-sm mb-2">Frontend</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$4.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="Vue.js Logo" data-category="Frontend">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker Vue.js Logo" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">Vue.js Logo</h3><p class="text-muted-custom text-sm mb-2">Frontend</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$3.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="Node.js Badge" data-category="Backend">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker Node.js Badge" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">Node.js Badge</h3><p class="text-muted-custom text-sm mb-2">Backend</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$4.50</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="Python Snake" data-category="Backend">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker Python Snake" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">Python Snake</h3><p class="text-muted-custom text-sm mb-2">Backend</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$3.50</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="Docker Whale" data-category="DevOps">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker Docker Whale" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">Docker Whale</h3><p class="text-muted-custom text-sm mb-2">DevOps</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$5.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="Git Branch" data-category="DevOps">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker Git Branch" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">Git Branch</h3><p class="text-muted-custom text-sm mb-2">DevOps</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$2.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="TypeScript TS" data-category="Frontend">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker TypeScript TS" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">TypeScript TS</h3><p class="text-muted-custom text-sm mb-2">Frontend</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$4.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="MongoDB Leaf" data-category="Bases de Datos">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker MongoDB Leaf" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">MongoDB Leaf</h3><p class="text-muted-custom text-sm mb-2">Bases de Datos</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$3.99</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+            <article class="col" data-product-card data-name="AI Neural Network" data-category="Inteligencia Artificial">
+              <a href="producto.html" class="text-decoration-none"><div class="product-card h-100"><div class="product-card-img"><img src="img/product-sticker.jpg" alt="Sticker AI Neural Network" width="300" height="300" loading="lazy"></div><div class="product-card-body"><h3 class="text-product-name mb-1">AI Neural Network</h3><p class="text-muted-custom text-sm mb-2">Inteligencia Artificial</p><div class="d-flex justify-content-between align-items-center"><span class="text-product-price text-primary">$5.49</span><span class="star-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></div></div></div></a>
+            </article>
+          </div>
+
+          <nav class="mt-5 d-flex justify-content-center pagination-custom" aria-label="Paginación del catálogo">
+            <ul class="pagination mb-0">
+              <li class="page-item"><a class="page-link" href="#" aria-label="Anterior"><i class="bi bi-chevron-left"></i></a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="filtersOffcanvas" aria-labelledby="filtersOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5 fw-bold" id="filtersOffcanvasLabel"><i class="bi bi-funnel me-2"></i>Filtros</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar filtros"></button>
+    </div>
+    <div class="offcanvas-body filter-sidebar">
+      <div class="mb-4">
+        <h3 class="h6 fw-semibold mb-3">Buscar</h3>
+        <input type="search" class="form-control" placeholder="Buscar productos..." aria-label="Buscar productos en mobile" oninput="document.getElementById('catalogSearch').value=this.value; document.getElementById('catalogSearch').dispatchEvent(new Event('input'))">
+      </div>
+      <div class="mb-4">
+        <h3 class="h6 fw-semibold mb-3">Categorías</h3>
+        <div class="d-flex flex-column gap-2">
+          <button type="button" class="filter-btn active" data-filter-category="all">Todos</button>
+          <button type="button" class="filter-btn" data-filter-category="Frontend">Frontend</button>
+          <button type="button" class="filter-btn" data-filter-category="Backend">Backend</button>
+          <button type="button" class="filter-btn" data-filter-category="Inteligencia Artificial">Inteligencia Artificial</button>
+          <button type="button" class="filter-btn" data-filter-category="DevOps">DevOps</button>
+          <button type="button" class="filter-btn" data-filter-category="Bases de Datos">Bases de Datos</button>
+          <button type="button" class="filter-btn" data-filter-category="Ciberseguridad">Ciberseguridad</button>
+          <button type="button" class="filter-btn" data-filter-category="Gaming">Gaming</button>
+          <button type="button" class="filter-btn" data-filter-category="Diseño">Diseño</button>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary w-100" data-bs-dismiss="offcanvas">Aplicar Filtros</button>
+    </div>
+  </div>
+
+  <footer class="site-footer section-padding pb-4">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-6">
+          <a href="index.html" class="d-flex align-items-center gap-3 text-white text-decoration-none mb-4">
+            <img src="img/c7s-v5.png" alt="Capa Siete Studio" width="48" height="48">
+            <div><span class="brand-name d-block text-white">Capa Siete Studio</span><span class="brand-tagline text-white-50">Tech Stickers</span></div>
+          </a>
+          <p class="text-white-50 mb-4" style="max-width: 360px;">Los mejores stickers de programación y tecnología.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="h6 fw-semibold mb-3">Navegación</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html">Inicio</a></li>
+            <li class="mb-2"><a href="catalogo.html">Catálogo</a></li>
+            <li class="mb-2"><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h3 class="h6 fw-semibold mb-3">Información</h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="mailto:info@capasiete.studio">info@capasiete.studio</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top border-white border-opacity-10 mt-5 pt-4">
+        <p class="text-white-50 text-sm mb-0">© 2026 Capa Siete Studio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5 fw-bold" id="cartOffcanvasLabel"><i class="bi bi-cart3 me-2"></i>Carrito</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmpty" class="text-center text-muted-custom py-5"><i class="bi bi-cart-x display-4 d-block mb-3"></i><p>Tu carrito está vacío</p></div>
+      <div id="cartItems" class="flex-grow-1"></div>
+      <div class="border-top pt-3 mt-auto"><div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span id="cartTotal">$0.00</span></div></div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header"><i class="bi bi-check-circle-fill text-primary me-2"></i><strong class="me-auto">Capa Siete Studio</strong><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button></div>
+      <div class="toast-body" id="toastMessage"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Técnico SEO | Capa Siete Studio</title>
+  <style>
+    :root { --primary: #7c3aed; --text: #1a1a2e; --muted: #6b7280; --border: #e5e7eb; }
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--text); line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; background: #fafafa; }
+    header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    header img { height: 72px; width: auto; margin-bottom: 1rem; }
+    header h1 { font-size: 1.75rem; margin: 0 0 0.25rem; color: var(--primary); }
+    header p { margin: 0.25rem 0; color: var(--muted); font-size: 0.95rem; }
+    h2 { font-size: 1.25rem; color: var(--primary); margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    p, li { font-size: 0.95rem; }
+    ul { padding-left: 1.25rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: #fff; }
+    th, td { border: 1px solid var(--border); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+    th { background: #f5f5f7; font-weight: 600; }
+    code { background: #f5f5f7; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../img/c7s-v5.png" alt="Capa Siete Studio">
+    <h1>Informe Técnico SEO</h1>
+    <p><strong>Materia:</strong> Desarrollo de Sitios Web</p>
+    <p><strong>Proyecto:</strong> Capa Siete Studio — Tienda online de stickers tech</p>
+    <p><strong>Fecha:</strong> 30/06/2026</p>
+  </header>
+
+  <main>
+
+    <h2>1. Título del sitio y dominio</h2>
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>TP1</th><th>TP2</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Título</td><td>Capa Siete Studio</td><td>Capa Siete Studio | Stickers de Programación y Tecnología</td></tr>
+        <tr><td>Dominio</td><td>capasiete.studio (ficticio)</td><td><code>https://exthuman.github.io/utn-c7s/</code></td></tr>
+      </tbody>
+    </table>
+    <p>En el TP2 agregamos palabras clave al <code>&lt;title&gt;</code> (stickers, programación, tecnología). El nombre de la marca no cambió.</p>
+    <p>El sitio está publicado en GitHub Pages: <code>https://exthuman.github.io/utn-c7s/</code></p>
+
+    <h2>2. Palabras clave objetivo</h2>
+    <h3>Generales del sitio</h3>
+    <ul>
+      <li>stickers programación</li>
+      <li>stickers developers</li>
+      <li>stickers tecnología</li>
+      <li>Capa Siete Studio</li>
+      <li>tienda stickers tech Argentina</li>
+    </ul>
+
+    <h3>Por página</h3>
+    <table>
+      <thead><tr><th>Página</th><th>Palabras clave</th></tr></thead>
+      <tbody>
+        <tr><td>index.html</td><td>stickers developers, stickers programación, packs stickers, stickers personalizados</td></tr>
+        <tr><td>catalogo.html</td><td>catálogo stickers, stickers React, stickers Python, stickers Docker</td></tr>
+        <tr><td>producto.html</td><td>sticker React, React Hook sticker, sticker vinilo premium</td></tr>
+        <tr><td>contacto.html</td><td>contacto stickers, pedidos personalizados, FAQ stickers</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. Estrategias de optimización</h2>
+
+    <h3>Etiquetas semánticas</h3>
+    <p>Usamos <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, <code>footer</code> y <code>dl</code>/<code>dt</code>/<code>dd</code> donde hacía falta.</p>
+
+    <h3>Jerarquía de títulos</h3>
+    <p>Cada página tiene un solo <code>h1</code>. Los <code>h2</code> marcan secciones (por ejemplo «Productos Destacados», «Descripción») y los <code>h3</code> van en productos, categorías o preguntas del FAQ.</p>
+    <table>
+      <thead><tr><th>Página</th><th>h1</th></tr></thead>
+      <tbody>
+        <tr><td>index.html</td><td>Stickers únicos para developers</td></tr>
+        <tr><td>catalogo.html</td><td>Catálogo Completo</td></tr>
+        <tr><td>producto.html</td><td>React Hook Sticker Premium</td></tr>
+        <tr><td>contacto.html</td><td>Contacto</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Atributos alt en imágenes</h3>
+    <p>Todas las imágenes tienen <code>alt</code> con una descripción corta. En las que están más abajo en la página usamos <code>loading="lazy"</code>. También definimos <code>width</code> y <code>height</code> para que no salten al cargar.</p>
+
+    <h3>URLs amigables</h3>
+    <p>Las rutas son simples y en español: <code>catalogo.html</code>, <code>producto.html</code>, <code>contacto.html</code>.</p>
+
+    <h3>Metadatos</h3>
+    <p>Cada HTML tiene su propio <code>&lt;title&gt;</code> y <code>&lt;meta name="description"&gt;</code>. También agregamos <code>keywords</code>, <code>canonical</code>, etiquetas Open Graph (<code>og:title</code>, <code>og:description</code>, <code>og:image</code>, etc.) y <code>lang="es"</code> en el html.</p>
+
+    <h3>Enlaces internos</h3>
+    <p>El navbar y el footer enlazan las cuatro páginas. También hay links entre portada, catálogo, producto y contacto.</p>
+
+    <h3>Código y recursos</h3>
+    <p>Dejamos un solo CSS compilado (<code>main.css</code>) y un solo JS propio (<code>main.js</code>). Bootstrap lo cargamos por CDN. Las imágenes están en <code>/img</code> del propio sitio. Agregamos <code>robots.txt</code> y <code>sitemap.xml</code> con las cuatro URLs.</p>
+
+    <h3>Tiempo de carga</h3>
+    <p>El CSS lo pre-compilamos con Sass en modo comprimido. El JS de Bootstrap va por jsDelivr. Las fuentes (Inter, Space Mono) las pedimos a Google Fonts con <code>display=swap</code>. Las imágenes del hero cargan de una y el resto con lazy loading.</p>
+
+    <h2>4. Herramientas que usamos para revisar</h2>
+    <ul>
+      <li><strong>Google Lighthouse</strong> (SEO, performance, accesibilidad)</li>
+      <li><strong>WAVE</strong> (contraste y accesibilidad)</li>
+      <li><strong>SEO Minion</strong> (titles, descriptions, headings)</li>
+      <li><strong>Google Search Console</strong> (sitemap después de publicar)</li>
+    </ul>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://exthuman.github.io/utn-c7s/sitemap.xml

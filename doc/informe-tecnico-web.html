@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Técnico Web | Capa Siete Studio</title>
+  <style>
+    :root { --primary: #7c3aed; --text: #1a1a2e; --muted: #6b7280; --border: #e5e7eb; }
+    * { box-sizing: border-box; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--text); line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; background: #fafafa; }
+    header { text-align: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    header img { height: 72px; width: auto; margin-bottom: 1rem; }
+    header h1 { font-size: 1.75rem; margin: 0 0 0.25rem; color: var(--primary); }
+    header p { margin: 0.25rem 0; color: var(--muted); font-size: 0.95rem; }
+    h2 { font-size: 1.25rem; color: var(--primary); margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    p, li { font-size: 0.95rem; }
+    ul { padding-left: 1.25rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; background: #fff; }
+    th, td { border: 1px solid var(--border); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+    th { background: #f5f5f7; font-weight: 600; }
+    code { background: #f5f5f7; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+    .note { background: #f3e8ff; border-left: 4px solid var(--primary); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../img/c7s-v5.png" alt="Capa Siete Studio">
+    <h1>Informe Técnico Web</h1>
+    <p><strong>Materia:</strong> Desarrollo de Sitios Web</p>
+    <p><strong>Proyecto:</strong> Capa Siete Studio — Tienda online de stickers tech</p>
+    <p><strong>Fecha:</strong> 30/06/2026</p>
+  </header>
+
+  <main>
+
+    <h2>Integrantes</h2>
+    <table>
+      <thead>
+        <tr><th>Apellido y Nombre</th><th>Legajo</th><th>Email</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Corrales, Eloy</td><td>95850319</td><td>ecorralesrodriguez@frsf.utn.edu.ar</td></tr>
+        <tr><td>Bullorini, Nicolás</td><td>35957799</td><td>nbullorini@frsf.utn.edu.ar</td></tr>
+      </tbody>
+    </table>
+
+    <h2>1. Cambios respecto del TP1</h2>
+    <p>En el TP1 definimos la identidad, la navegación y los wireframes de <strong>Capa Siete Studio</strong>. Para el TP2 tomamos eso como base y lo maquetamos en HTML con Bootstrap, sin cambiar la idea del sitio:</p>
+    <ul>
+      <li>Colores y tipografías del TP1 (púrpura #7C3AED, cyan #06B6D4, Inter y Space Mono).</li>
+      <li>Misma navegación: Inicio, Catálogo, Contacto y detalle de producto.</li>
+      <li>Portada con hero, destacados, categorías, packs, personalizados y newsletter.</li>
+      <li>Internas: catálogo con filtros, ficha de producto, contacto y FAQ.</li>
+    </ul>
+    <p><strong>No hubo cambios conceptuales.</strong> Pasamos de wireframes a HTML. La estructura quedó igual a la del TP1.</p>
+
+    <h2>2. Componentes JavaScript de Bootstrap</h2>
+    <p>La consigna pide al menos 4 componentes JS. Usamos 6:</p>
+
+    <h3>Collapse (menú mobile)</h3>
+    <p>Está en el navbar de las cuatro páginas. En celular y tablet el menú se pliega y se abre con el botón hamburguesa. Lo usamos porque es lo que trae Bootstrap para navegación responsive y ya incluye los atributos ARIA.</p>
+
+    <h3>Offcanvas — carrito</h3>
+    <p>En el botón del carrito (navbar). Muestra los productos agregados, el total y permite eliminar ítems. Nos pareció más práctico que ir a otra página para ver el carrito.</p>
+
+    <h3>Offcanvas — filtros (mobile)</h3>
+    <p>Solo en <code>catalogo.html</code>. En pantallas chicas los filtros van en un panel lateral porque el sidebar fijo ocupa mucho lugar. En desktop los filtros quedan visibles al costado.</p>
+
+    <h3>Accordion</h3>
+    <p>En <code>contacto.html</code>, sección de preguntas frecuentes. Son cinco ítems que se abren y cierran. Ayuda a no tener un bloque de texto muy largo en mobile.</p>
+
+    <h3>Carousel</h3>
+    <p>En <code>producto.html</code>, galería con cuatro fotos. Tiene flechas prev/next y lo sincronizamos con las miniaturas de abajo usando JS.</p>
+
+    <h3>Toast</h3>
+    <p>En todas las páginas. Muestra un mensaje corto cuando agregás al carrito, enviás el formulario de contacto o te suscribís al newsletter.</p>
+
+    <h2>3. JavaScript — captura de eventos</h2>
+    <p>Toda la lógica propia está en <code>js/main.js</code>:</p>
+    <table>
+      <thead>
+        <tr><th>Evento</th><th>Dónde</th><th>Qué hace</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>click</code></td><td>Botones +/− en producto</td><td>Cambia la cantidad (mínimo 1)</td></tr>
+        <tr><td><code>click</code></td><td>Miniaturas de la galería</td><td>Pasa al slide correspondiente del carousel</td></tr>
+        <tr><td><code>click</code></td><td>Filtros del catálogo</td><td>Muestra u oculta productos por categoría</td></tr>
+        <tr><td><code>input</code></td><td>Buscador del catálogo</td><td>Filtra productos mientras escribís</td></tr>
+        <tr><td><code>click</code></td><td>Agregar al carrito</td><td>Guarda en localStorage y actualiza el contador</td></tr>
+        <tr><td><code>click</code></td><td>Eliminar del carrito</td><td>Saca el ítem del localStorage</td></tr>
+        <tr><td><code>submit</code></td><td>Formulario de contacto</td><td>Valida con HTML5 y muestra un Toast (no envía a servidor)</td></tr>
+        <tr><td><code>submit</code></td><td>Newsletter</td><td>Valida el email y muestra un Toast</td></tr>
+      </tbody>
+    </table>
+    <p>El carrito con <code>localStorage</code> es simulado: no hay backend, pero sirve para probar la interacción entre páginas.</p>
+
+    <h2>4. Personalización de Bootstrap con SASS</h2>
+    <p>Compilamos el theme desde <code>scss/main.scss</code>, que importa <code>_variables.scss</code> (antes de Bootstrap) y <code>_custom.scss</code> (después). Comando: <code>npm run build:css</code> → genera <code>css/main.css</code>.</p>
+    <table>
+      <thead>
+        <tr><th>Qué personalizamos</th><th>Valor / estilo</th><th>Archivo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Color principal</td><td><code>$primary: #7C3AED</code></td><td>_variables.scss</td></tr>
+        <tr><td>Secundario y acento</td><td><code>$secondary</code>, <code>$accent</code></td><td>_variables.scss</td></tr>
+        <tr><td>Fondo y texto</td><td><code>$body-bg</code>, <code>$body-color</code></td><td>_variables.scss</td></tr>
+        <tr><td>Fuentes</td><td>Inter y Space Mono</td><td>_variables.scss</td></tr>
+        <tr><td>Botones, cards, inputs</td><td>Bordes redondeados, paddings</td><td>_variables.scss</td></tr>
+        <tr><td>Hero con gradiente</td><td><code>.hero-gradient</code></td><td>_custom.scss</td></tr>
+        <tr><td>Tarjetas de producto</td><td>Hover con sombra y <code>translateY</code></td><td>_custom.scss</td></tr>
+      </tbody>
+    </table>
+    <p>En <code>_variables.scss</code> sobreescribimos variables de Bootstrap antes de compilar. En <code>_custom.scss</code> agregamos clases que no vienen en el framework (hero, cards, footer, galería, etc.).</p>
+
+    <h2>5. URL del proyecto publicado</h2>
+    <p><strong>URL:</strong> <code>https://exthuman.github.io/utn-c7s/</code></p>
+    <p>Publicamos en GitHub Pages. Es gratis, tiene HTTPS y sirve para un sitio estático. Repo en rama <code>main</code>, carpeta raíz.</p>
+
+    <h2>6. Estructura de archivos</h2>
+    <p>Organizamos el proyecto según la consigna:</p>
+    <ul>
+      <li><code>index.html</code> — portada</li>
+      <li><code>catalogo.html</code>, <code>producto.html</code>, <code>contacto.html</code> — secciones internas</li>
+      <li><code>css/</code> — <code>main.css</code> compilado</li>
+      <li><code>scss/</code> — fuentes SASS del theme</li>
+      <li><code>js/</code> — <code>main.js</code></li>
+      <li><code>img/</code> — imágenes y logo</li>
+      <li><code>doc/</code> — informes técnicos</li>
+      <li><code>tp1/</code> — sin correcciones del TP1</li>
+    </ul>
+
+    <h2>7. Diseño responsivo</h2>
+    <p>Probamos en celular, tablet y PC. Usamos el grid de Bootstrap con clases como <code>col-</code>, <code>col-md-</code> y <code>col-lg-</code>:</p>
+    <ul>
+      <li><strong>Celular:</strong> menú colapsado, filtros en offcanvas, grillas de 2 columnas.</li>
+      <li><strong>Tablet:</strong> navbar completa, grillas de 3 columnas.</li>
+      <li><strong>PC:</strong> sidebar de filtros visible, grillas de 4 columnas, efectos hover en cards.</li>
+    </ul>
+
+  </main>
+
+</body>
+</html>

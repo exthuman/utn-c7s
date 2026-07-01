@@ -1,0 +1,37 @@
+
+$text-xs: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-lg: 1.125rem;
+$text-xl: 1.25rem;
+$text-2xl: 1.5rem;
+$text-3xl: 1.875rem;
+$text-4xl: 2.25rem;
+$text-5xl: 3rem;
+$text-6xl: 3.75rem;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$h1-font-size: $text-4xl;
+$h2-font-size: $text-3xl;
+$h3-font-size: $text-2xl;
+$h4-font-size: $text-xl;
+$h5-font-size: $text-lg;
+$h6-font-size: $text-base;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.25;
+
+$font-size-base: $text-base;
+$lead-font-size: $text-lg;
+$lead-font-weight: $font-weight-normal;
+$small-font-size: $text-sm;
+
+$nav-link-font-size: $text-base;
+$nav-link-font-weight: $font-weight-medium;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
